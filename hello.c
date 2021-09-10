@@ -2,15 +2,11 @@
 #include <unistd.h>
 
 #ifndef DOCKER_IMAGE
-	#define DOCKER_IMAGE "hello-world"
+	#define DOCKER_IMAGE "hello"
 #endif
 
 #ifndef DOCKER_GREETING
 	#define DOCKER_GREETING "Hello from Prashant inside Docker container!"
-#endif
-
-#ifndef DOCKER_ARCH
-	#define DOCKER_ARCH "amd64"
 #endif
 
 const char message[] =
@@ -20,7 +16,6 @@ const char message[] =
 	"To generate this message, Docker took the following steps:\n"
 	" 1. The Docker client contacted the Docker daemon.\n"
 	" 2. The Docker daemon pulled the \"" DOCKER_IMAGE "\" image from the Docker Hub.\n"
-	"    (" DOCKER_ARCH ")\n"
 	" 3. The Docker daemon created a new container from that image which runs the\n"
 	"    executable that produces the output you are currently reading.\n"
 	" 4. The Docker daemon streamed that output to the Docker client, which sent it\n"
